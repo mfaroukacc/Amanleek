@@ -38,6 +38,15 @@ public class ArraySorterTest {
         int[] sortedArray = arraySorter.sorter(inputArray);
         Assert.assertEquals(sortedArray, expectedArray, "Array is not sorted correctly");
     }
+    @Test
+    public void testSortNegativeNumbers() {
+        // Test sorting an array of negative numbers
+        int[] inputArray = {-5, -3, -1, -7, -2};
+        int[] expectedArray = {-7, -5, -3, -2, -1};
+        ArraySorter arraySorter = new ArraySorter(driver);
+        int[] sortedArray = arraySorter.sorter(inputArray);
+        Assert.assertEquals(sortedArray, expectedArray, "Array is not sorted correctly");
+    }
 
     @Test
     public void testSortEmptyArray() {
